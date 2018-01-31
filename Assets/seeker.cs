@@ -16,23 +16,28 @@ public class seeker : MonoBehaviour {
     void Start()
     {
 
-        rb = GetComponent<Rigidbody>();
+       // rb = GetComponent<Rigidbody>();
         // assigning the Rigidbody we are adding force to, 
         //  to the rigidbody attached to this object
     }
 
     void Update()
     {
-        desiredVelocity = speed * (Target.transform.position - transform.position).normalized;
+        //desiredVelocity = speed * (Target.transform.position - transform.position).normalized;
         //Calculating the directional normalized vector
         // between OUR position and the TARGETs position
         //Then multiplying it by our speed
 
 
-        rb.AddForce(desiredVelocity - rb.velocity);
+       // rb.AddForce(desiredVelocity - rb.velocity);
         //Subtracting our velocity from our force
         // provides us with a smoother acceleration
         //and maintainment of our speed
+
+    }
+
+    public Vector3 returnTargetPos()
+    {
 
     }
 }
